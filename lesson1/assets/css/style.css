@@ -1,0 +1,49 @@
+.box {
+  width: 400px;
+  height: 400px;
+  background-color: blue;
+  margin: 40px;
+  position: relative;
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.box:hover::after {
+  opacity: 0.2;
+  visibility: visible;
+}
+
+p::before {
+  content: "sdjjas";
+}
+
+li {
+  width: 100px !important;
+  position: relative;
+}
+
+li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: brown;
+  width: 0;
+  height: 2px;
+  transition: all 0.3s ease;
+}
+
+li:hover::after {
+  width: 100%;
+}
